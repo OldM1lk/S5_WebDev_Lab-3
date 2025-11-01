@@ -1,5 +1,5 @@
 import {useState} from "react";
-import "/Form.css"
+import "./Form.css"
 
 function Form({onAdd}) {
     const [title, setTitle] = useState("");
@@ -35,7 +35,7 @@ function Form({onAdd}) {
                 />
             </div>
             <button className="button-add" type="submit">
-                <img src="../../assets/svg/plus-icon.svg" alt="Plus Icon"/>
+                <img src="../../../public/svg/plus-icon.svg" alt="Plus Icon"/>
             </button>
         </form>
     )
