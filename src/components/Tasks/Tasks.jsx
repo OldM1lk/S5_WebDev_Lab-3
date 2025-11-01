@@ -1,7 +1,7 @@
 import "./Tasks.css"
 import Task from "../Task/Task.jsx";
 
-function Tasks({tasks, isTaskToolsOpen, onClick, onDelete, onShare, onEdit}) {
+function Tasks({tasks, onDelete, onShare, onEdit}) {
     return (
         <section className="tasks">
             {tasks.length === 0 ? (
@@ -11,8 +11,6 @@ function Tasks({tasks, isTaskToolsOpen, onClick, onDelete, onShare, onEdit}) {
                     {tasks.map((task) => (
                         <Task
                             task={task}
-                            isTaskToolsOpen={isTaskToolsOpen}
-                            onClick={onClick}
                             onDelete={onDelete}
                             onShare={onShare}
                             onEdit={onEdit}

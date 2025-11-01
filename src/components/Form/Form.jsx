@@ -35,7 +35,7 @@ function Form({onAdd}) {
                 />
             </div>
             <button className="button-add" type="submit">
-                <img src="../../../public/svg/plus-icon.svg" alt="Plus Icon"/>
+                <img src="/svg/plus-icon.svg" alt="Plus Icon"/>
             </button>
         </form>
     )
