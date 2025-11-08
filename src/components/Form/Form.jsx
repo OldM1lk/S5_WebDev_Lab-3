@@ -20,7 +20,6 @@ function Form({onAdd}) {
         <form className="form" onSubmit={handleSubmit}>
             <div className="form__inputs">
                 <FormInput
-                    className="input"
                     type="text"
                     name="title"
                     placeholder="Title..."
@@ -28,7 +27,6 @@ function Form({onAdd}) {
                     onChange={(e) => setTitle(e.target.value)}
                 />
                 <FormInput
-                    className="input"
                     type="text"
                     name="description"
                     placeholder="About..."
