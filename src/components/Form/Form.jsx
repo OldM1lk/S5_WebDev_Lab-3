@@ -1,5 +1,7 @@
 import {useState} from "react";
 import "./Form.css"
+import FormInput from "./Input/FormInput.jsx";
+import AddButton from "./Button/AddButton.jsx";
 
 function Form({onAdd}) {
     const [title, setTitle] = useState("");
@@ -17,7 +19,7 @@ function Form({onAdd}) {
     return (
         <form className="form" onSubmit={handleSubmit}>
             <div className="form__inputs">
-                <input
+                <FormInput
                     className="input"
                     type="text"
                     name="title"
@@ -25,7 +27,7 @@ function Form({onAdd}) {
                     value={title}
                     onChange={(e) => setTitle(e.target.value)}
                 />
-                <input
+                <FormInput
                     className="input"
                     type="text"
                     name="description"
@@ -34,9 +36,7 @@ function Form({onAdd}) {
                     onChange={(e) => setDescription(e.target.value)}
                 />
             </div>
-            <button className="button-add" type="submit">
-                <img src="/svg/plus-icon.svg" alt="Plus Icon"/>
-            </button>
+            <AddButton/>
         </form>
     )
 }

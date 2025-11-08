@@ -10,33 +10,3 @@
     flex-direction: column;
     gap: 0.5rem;
 }
-
-.input {
-    background-color: #242320;
-    color: #F0E3CAA3;
-    border-radius: 4px;
-    font-family: Roboto, sans-serif;
-    font-size: 14px;
-    border: 1px solid #FF8303;
-    padding: 0.5rem 0.75rem 0.5rem 0.75rem;
-}
-
-.input:hover {
-    background-color: #2B2A27;
-    color: #F0E3CA;
-}
-
-.button-add {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #1B1A17;
-    border-radius: 8px;
-    border: 2px solid #FF8303;
-    padding: 0 1.5rem 0 1.5rem;
-    cursor: pointer;
-}
-
-.button-add:hover {
-    background-color: #23221F;
-}
