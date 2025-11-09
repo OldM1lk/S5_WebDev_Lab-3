@@ -1,9 +1,7 @@
 import {useState} from "react";
 import "./Form.css"
-import FormInput from "./Input/FormInput.jsx";
-import AddButton from "./Button/AddButton.jsx";
 
-function Form({onAdd}) {
+export const Form = ({onAdd}) => {
     const [title, setTitle] = useState("");
     const [description, setDescription] = useState("");
 
@@ -19,24 +17,22 @@ function Form({onAdd}) {
     return (
         <form className="form" onSubmit={handleSubmit}>
             <div className="form__inputs">
-                <FormInput
+                <input
                     type="text"
-                    name="title"
+                    className="input"
                     placeholder="Title..."
-                    value={title}
                     onChange={(e) => setTitle(e.target.value)}
                 />
-                <FormInput
+                <input
                     type="text"
-                    name="description"
-                    placeholder="About..."
-                    value={description}
+                    className="input"
+                    placeholder="Description..."
                     onChange={(e) => setDescription(e.target.value)}
                 />
             </div>
-            <AddButton/>
+            <button type="submit" className="button-add">
+                <img src="/svg/plus-icon.svg" alt="Plus Icon"/>
+            </button>
         </form>
     )
 }
-
-export default Form;

@@ -1,5 +1,5 @@
 import {useState} from "react";
-import Form from "./components/Form/Form.jsx";
+import {Form} from "./components/Form/Form.jsx";
 import Tasks from "./components/Tasks/Tasks.jsx";
 
 function App() {
