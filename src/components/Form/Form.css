@@ -11,7 +11,7 @@
     gap: 0.5rem;
 }
 
-.input {
+.form__input {
     background-color: #242320;
     color: #F0E3CAA3;
     border-radius: 4px;
@@ -21,7 +21,7 @@
     padding: 0.5rem 0.75rem 0.5rem 0.75rem;
 }
 
-.input:hover {
+.form__input:hover {
     background-color: #2B2A27;
     color: #F0E3CA;
 }

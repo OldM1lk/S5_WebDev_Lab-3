@@ -1,7 +1,7 @@
 import "./Tasks.css"
-import Task from "../Task/Task.jsx";
+import {Task} from "../Task/Task.jsx";
 
-function Tasks({tasks, onDelete, onShare, onEdit}) {
+export const Tasks = ({tasks, deleteTask}) => {
     return (
         <section className="tasks">
             {tasks.length === 0 ? (
@@ -9,17 +9,10 @@ function Tasks({tasks, onDelete, onShare, onEdit}) {
             ) : (
                 <ul className="tasks__list">
                     {tasks.map((task) => (
-                        <Task
-                            task={task}
-                            onDelete={onDelete}
-                            onShare={onShare}
-                            onEdit={onEdit}
-                        />
+                        <Task task={task} deleteTask={deleteTask}/>
                     ))}
                 </ul>
             )}
         </section>
     )
 }
-
-export default Tasks;
