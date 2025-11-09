@@ -42,8 +42,8 @@ export const Tasks = ({tasks, deleteTask}) => {
             </section>
             {isAlertOpen && (
                 <Alert
-                    handleClose={closeDeleteConfirmation}
-                    confirm={handleDelete}
+                    onCancelClick={closeDeleteConfirmation}
+                    onConfirmClick={handleDelete}
                 />
             )}
         </>
