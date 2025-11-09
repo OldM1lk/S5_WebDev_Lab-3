@@ -2,7 +2,7 @@ import "./Task.css"
 import {useState} from "react";
 import {TaskTools} from "../TaskTools/TaskTools.jsx";
 
-export const Task = ({task, deleteTask}) => {
+export const Task = ({task, openDeleteConfirmation}) => {
     const [isToolsOpen, setIsToolsOpen] = useState(false)
 
     const toggleTools = () => setIsToolsOpen(!isToolsOpen)
@@ -16,7 +16,7 @@ export const Task = ({task, deleteTask}) => {
                 </div>
                 <button className="button-delete" onClick={(e) => {
                     e.stopPropagation();
-                    deleteTask(task.id)
+                    openDeleteConfirmation(task.id)
                 }}>
                     <img src="/svg/cross-icon.svg" alt="Cross Icon"/>
                 </button>
