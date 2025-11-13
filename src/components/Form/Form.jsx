@@ -1,7 +1,7 @@
 import "./Form.css"
 import {useState} from "react";
 
-export const Form = ({addTask}) => {
+export const Form = ({onAdd}) => {
     const [title, setTitle] = useState("")
     const [description, setDescription] = useState("")
 
@@ -9,7 +9,7 @@ export const Form = ({addTask}) => {
         e.preventDefault()
         if (!title.trim()) return
 
-        addTask({id: Date.now(), title, description})
+        onAdd({id: Date.now(), title, description})
         setTitle("")
         setDescription("")
     }
