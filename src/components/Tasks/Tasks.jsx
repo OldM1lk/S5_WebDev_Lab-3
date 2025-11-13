@@ -35,7 +35,7 @@ export const Tasks = ({tasks, deleteTask}) => {
                 ) : (
                     <ul className="tasks__list">
                         {tasks.map((task) => (
-                            <Task task={task} openDeleteConfirmation={openDeleteConfirmation}/>
+                            <Task key={task.id} task={task} openDeleteConfirmation={openDeleteConfirmation}/>
                         ))}
                     </ul>
                 )}
