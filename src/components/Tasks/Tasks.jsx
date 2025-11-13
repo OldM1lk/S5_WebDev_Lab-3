@@ -1,51 +1,24 @@
 import "./Tasks.css"
 import {Task} from "../Task/Task.jsx";
-import {useState} from "react";
-import {Alert} from "../Alert/Alert.jsx";
 
-export const Tasks = ({tasks, deleteTask}) => {
-    const [isAlertOpen, setIsAlertOpen] = useState(false)
-    const [currentTaskId, setCurrentTaskId] = useState(null)
-
-    const openDeleteConfirmation = id => {
-        setCurrentTaskId(id)
-        setIsAlertOpen(true)
-        console.log(isAlertOpen)
-    }
-
-    const closeDeleteConfirmation = () => {
-        setCurrentTaskId(null)
-        setIsAlertOpen(false)
-        console.log(isAlertOpen)
-    }
-
-    const handleDelete = () => {
-        if (currentTaskId) {
-            deleteTask(currentTaskId)
-            closeDeleteConfirmation()
-            console.log(isAlertOpen)
-        }
-    }
-
+export const Tasks = ({tasks, onDelete, onEdit, onShare}) => {
     return (
-        <>
-            <section className="tasks">
-                {tasks.length === 0 ? (
-                    <p className="tasks__empty">No tasks</p>
-                ) : (
-                    <ul className="tasks__list">
-                        {tasks.map((task) => (
-                            <Task key={task.id} task={task} openDeleteConfirmation={openDeleteConfirmation}/>
-                        ))}
-                    </ul>
-                )}
-            </section>
-            {isAlertOpen && (
-                <Alert
-                    onCancelClick={closeDeleteConfirmation}
-                    onConfirmClick={handleDelete}
-                />
+        <section className="tasks">
+            {tasks.length === 0 ? (
+                <p className="tasks__empty">No tasks</p>
+            ) : (
+                <ul className="tasks__list">
+                    {tasks.map((task) => (
+                        <Task
+                            key={task.id}
+                            task={task}
+                            onDelete={onDelete}
+                            onEdit={onEdit}
+                            onShare={onShare}
+                        />
+                    ))}
+                </ul>
             )}
-        </>
+        </section>
     )
 }
