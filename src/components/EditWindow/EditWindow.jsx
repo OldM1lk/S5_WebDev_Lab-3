@@ -1,3 +1,4 @@
+import "./EditWindow.css"
 import {useState} from "react";
 
 export const EditWindow = ({task, onSave, onCancel}) => {
