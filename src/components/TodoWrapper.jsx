@@ -16,7 +16,10 @@ export const TodoWrapper = () => {
 
     useEffect(() => {
         const data = localStorage.getItem(STORAGE_KEY)
-        if (data) setTasks(JSON.parse(data))
+        if (data) {
+            setTasks(JSON.parse(data))
+            console.log(data)
+        }
     }, [])
     useEffect(() => {
         localStorage.setItem(STORAGE_KEY, JSON.stringify(tasks))
@@ -24,10 +27,12 @@ export const TodoWrapper = () => {
 
     const addTask = (title, description) => {
         const newTask = {id: Date.now(), title, description}
+        console.log(newTask)
         setTasks((prev) => [...prev, newTask])
     }
     const deleteTask = id => setTasks(prev => prev.filter(t => t.id !== id))
     const editTask = (id, newTitle, newDescription) => {
+        if (!newTitle.trim()) return
         setTasks((prev) =>
             prev.map((t) =>
                 t.id === id ? {...t, title: newTitle, description: newDescription} : t
