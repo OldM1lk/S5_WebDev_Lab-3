@@ -9,7 +9,7 @@ export const Form = ({onAdd}) => {
         e.preventDefault()
         if (!title.trim()) return
 
-        onAdd({id: Date.now(), title, description})
+        onAdd(title, description)
         setTitle("")
         setDescription("")
     }
