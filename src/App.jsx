@@ -1,9 +1,10 @@
+import {TodoWrapper} from "./components/TodoWrapper.jsx";
+
 function App() {
     return (
-        <>
-            <div>
-            </div>
-        </>
+        <div>
+            <TodoWrapper/>
+        </div>
     )
 }
 
