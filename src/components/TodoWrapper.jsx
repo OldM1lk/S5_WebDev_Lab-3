@@ -5,13 +5,8 @@ import {Tasks} from "./Tasks/Tasks.jsx";
 export const TodoWrapper = () => {
     const [tasks, setTasks] = useState([])
 
-    const addTask = task => {
-        setTasks([...tasks, task])
-    }
-
-    const deleteTask = id => {
-        setTasks(tasks.filter(task => task.id !== id))
-    }
+    const addTask = task => setTasks(prev => [...prev, task])
+    const deleteTask = id => setTasks(prev => prev.filter(t => t.id !== id))
 
     return (
         <>
