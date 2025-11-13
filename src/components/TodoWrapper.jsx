@@ -20,6 +20,13 @@ export const TodoWrapper = () => {
         setTasks((prev) => [...prev, newTask])
     }
     const deleteTask = id => setTasks(prev => prev.filter(t => t.id !== id))
+    const editTask = (id, newTitle, newDescription) => {
+        setTasks((prev) =>
+            prev.map((t) =>
+                t.id === id ? {...t, title: newTitle, description: newDescription} : t
+            )
+        )
+    }
 
     return (
         <>
