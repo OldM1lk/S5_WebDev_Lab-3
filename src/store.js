@@ -1,7 +1,7 @@
-import {configureStore} from "@reduxjs/toolkit";
-import todoReducer from "./todoSlice";
+import {configureStore} from "@reduxjs/toolkit"
+import todoReducer from "./todoSlice"
 
-const STORAGE_KEY = 'tasks';
+const STORAGE_KEY = 'tasks'
 
 const loadState = () => {
     try {
@@ -38,7 +38,7 @@ const store = configureStore({
 })
 
 store.subscribe(() => {
-    saveState(store.getState());
+    saveState(store.getState())
 })
 
-export default store;
+export default store

@@ -1,4 +1,4 @@
-import {createSlice} from "@reduxjs/toolkit";
+import {createSlice} from "@reduxjs/toolkit"
 
 const todoSlice = createSlice({
     name: 'todos',
@@ -14,7 +14,7 @@ const todoSlice = createSlice({
             })
         },
         deleteTodo: (state, action) => {
-            state.items = state.items.filter((t) => t.id !== action.payload);
+            state.items = state.items.filter((t) => t.id !== action.payload)
         },
         editTodo: (state, action) => {
             const {id, title, description} = action.payload
@@ -47,5 +47,5 @@ const todoSlice = createSlice({
     },
 })
 
-export const {addTodo, deleteTodo, editTodo, togglePin, reorderUnpinned} = todoSlice.actions;
-export default todoSlice.reducer;
+export const {addTodo, deleteTodo, editTodo, togglePin, reorderUnpinned} = todoSlice.actions
+export default todoSlice.reducer
