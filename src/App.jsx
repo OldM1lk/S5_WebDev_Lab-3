@@ -1,4 +1,4 @@
-import {TodoWrapper} from "./components/TodoWrapper.jsx";
+import {TodoWrapper} from "./components/TodoWrapper.jsx"
 
 function App() {
     return (

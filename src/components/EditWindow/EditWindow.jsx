@@ -1,5 +1,5 @@
 import "./EditWindow.css"
-import {useState} from "react";
+import {useState} from "react"
 
 export const EditWindow = ({task, onSave, onCancel}) => {
     const [newTitle, setNewTitle] = useState(task.title)

@@ -1,7 +1,7 @@
 import "./Tasks.css"
-import {Task} from "../Task/Task.jsx";
-import {useDispatch} from "react-redux";
-import {reorderUnpinned} from "../../todoSlice.js";
+import {Task} from "../Task/Task.jsx"
+import {useDispatch} from "react-redux"
+import {reorderUnpinned} from "../../todoSlice.js"
 
 export const Tasks = ({tasks, onDelete, onEdit, onShare, onTogglePin}) => {
     const dispatch = useDispatch()

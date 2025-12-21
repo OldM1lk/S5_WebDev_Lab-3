@@ -1,6 +1,6 @@
 import "./Task.css"
-import {useState} from "react";
-import {TaskTools} from "../TaskTools/TaskTools.jsx";
+import {useState} from "react"
+import {TaskTools} from "../TaskTools/TaskTools.jsx"
 
 export const Task = ({task, onDelete, onEdit, onShare, onTogglePin}) => {
     const [isToolsOpen, setIsToolsOpen] = useState(false)

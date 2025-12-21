@@ -1,5 +1,5 @@
 import "./Form.css"
-import {useState} from "react";
+import {useState} from "react"
 
 export const Form = ({onAdd}) => {
     const [title, setTitle] = useState("")

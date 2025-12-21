@@ -28,7 +28,7 @@ const saveState = (state) => {
     }
 }
 
-const preloadedState = loadState();
+const preloadedState = loadState()
 
 const store = configureStore({
     reducer: {
