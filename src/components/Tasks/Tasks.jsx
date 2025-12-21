@@ -45,7 +45,7 @@ export const Tasks = ({tasks, onDelete, onEdit, onShare, onTogglePin}) => {
                 {orderedTasks.map((task, index) => (
                     <li
                         key={task.id}
-                        className={`task ${task.isPinned ? 'task--pinned' : ''}`}
+                        className="task"
                         draggable={!task.isPinned}
                         onDragStart={(e) => handleDragStart(e, index)}
                         onDrop={(e) => handleDrop(e, index)}

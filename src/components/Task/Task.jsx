@@ -6,7 +6,7 @@ export const Task = ({task, onDelete, onEdit, onShare, onTogglePin}) => {
     const [isToolsOpen, setIsToolsOpen] = useState(false)
 
     return (
-        <li className="task">
+        <>
             <div className="task__content" onClick={() => setIsToolsOpen(!isToolsOpen)}>
                 <div className="task__content-pin">
                     <button
@@ -15,7 +15,6 @@ export const Task = ({task, onDelete, onEdit, onShare, onTogglePin}) => {
                             e.stopPropagation();
                             onTogglePin();
                         }}
-                        title={task.isPinned ? 'Открепить' : 'Закрепить (макс. 3)'}
                     >
                         {task.isPinned ? <img src="/svg/unpin-icon.svg" alt="Pin Icon"/> :
                             <img src="/svg/pin-icon.svg" alt="Pin Icon"/>}
@@ -42,6 +41,6 @@ export const Task = ({task, onDelete, onEdit, onShare, onTogglePin}) => {
                     onShare={onShare}
                 />
             )}
-        </li>
+        </>
     )
 }
