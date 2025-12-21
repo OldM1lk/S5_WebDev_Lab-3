@@ -1,0 +1,36 @@
+.task__tools {
+    width: auto;
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.5rem;
+}
+
+.button-share,
+.button-info,
+.button-edit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    background-color: #242320;
+    border-radius: 6px;
+    border: 2px solid #A35709;
+    cursor: pointer;
+}
+
+.button-info {
+    font-family: Roboto, sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 18px;
+    text-align: center;
+    vertical-align: middle;
+    color: #FFFFFF;
+}
+
+.button-share:hover,
+.button-info:hover,
+.button-edit:hover {
+    background-color: #2B2A27;
+}
