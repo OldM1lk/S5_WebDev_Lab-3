@@ -2,15 +2,28 @@ import "./Task.css"
 import {useState} from "react";
 import {TaskTools} from "../TaskTools/TaskTools.jsx";
 
-export const Task = ({task, onDelete, onEdit, onShare}) => {
+export const Task = ({task, onDelete, onEdit, onShare, onTogglePin}) => {
     const [isToolsOpen, setIsToolsOpen] = useState(false)
 
     return (
         <li className="task">
             <div className="task__content" onClick={() => setIsToolsOpen(!isToolsOpen)}>
-                <div className="text__area">
-                    <p className="text__title">{task.title}</p>
-                    <p className="text__description">{task.description}</p>
+                <div className="task__content-pin">
+                    <button
+                        className="button-pin"
+                        onClick={(e) => {
+                            e.stopPropagation();
+                            onTogglePin();
+                        }}
+                        title={task.isPinned ? 'Открепить' : 'Закрепить (макс. 3)'}
+                    >
+                        {task.isPinned ? <img src="/svg/unpin-icon.svg" alt="Pin Icon"/> :
+                            <img src="/svg/pin-icon.svg" alt="Pin Icon"/>}
+                    </button>
+                    <div className="text__area">
+                        <p className="text__title">{task.title}</p>
+                        <p className="text__description">{task.description}</p>
+                    </div>
                 </div>
                 <button
                     className="button-delete"
